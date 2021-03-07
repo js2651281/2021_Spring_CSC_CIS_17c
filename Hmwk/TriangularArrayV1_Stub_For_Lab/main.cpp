@@ -57,6 +57,8 @@ int **fillAry(int rows){
         array[i]=new int[rows];
     }
     for(int i=0;i<rows;i++){
+        // changed "j<rows" to "j<i+1", takes whatever index the outer loop is at
+        // and adds one, so the inner loop never gets past whatever the current row # is
         for(int j=0;j<i+1;j++){
             array[i][j]=mrkRand()%9+1;//1 Digit numbers [1-9]
         }
@@ -69,7 +71,9 @@ int **fillAry(int rows){
 //      array -> 2D Triangular Array/Matrix
 void prntAry(int **array,int rows){
     for(int i=0;i<rows;i++){
-        for(int j=0;j<i+1;j++){
+        // changed "j<rows" to "j<i+1", takes whatever index the outer loop is at
+        // and adds one, so the inner loop never gets past whatever the current row # is
+        for(int j=0;j<i+1;j++){     
             cout<<array[i][j]<<" ";
         }
         cout<<endl;
