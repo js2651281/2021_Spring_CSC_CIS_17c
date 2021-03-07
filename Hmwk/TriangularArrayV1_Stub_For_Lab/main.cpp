@@ -57,7 +57,7 @@ int **fillAry(int rows){
         array[i]=new int[rows];
     }
     for(int i=0;i<rows;i++){
-        for(int j=0;j<rows;j++){
+        for(int j=0;j<i+1;j++){
             array[i][j]=mrkRand()%9+1;//1 Digit numbers [1-9]
         }
     }
@@ -69,7 +69,7 @@ int **fillAry(int rows){
 //      array -> 2D Triangular Array/Matrix
 void prntAry(int **array,int rows){
     for(int i=0;i<rows;i++){
-        for(int j=0;j<rows;j++){
+        for(int j=0;j<i+1;j++){
             cout<<array[i][j]<<" ";
         }
         cout<<endl;
