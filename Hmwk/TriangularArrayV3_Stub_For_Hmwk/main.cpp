@@ -68,6 +68,7 @@ int **fillAry(int *col,int rows){
         array[i]=new int[col[i]];
     }
     for(int i=0;i<rows;i++){
+        //j goes from 0 to the number at col[i]
         for(int j=0;j<col[i];j++){
             array[i][j]=mrkRand()%9+1;//1 Digit numbers [1-9]
         }
@@ -81,8 +82,11 @@ int **fillAry(int *col,int rows){
 //      array -> 2D Triangular Array/Matrix
 void prntAry(int **array,int *col,int *indx,int rows){
     for(int i=0;i<rows;i++){
-        for(int j=0;j<col[i];j++){
-            cout<<array[i][j]<<" ";
+        // j goes from 0 to the column at index i,
+        // this follows the order set by mrkSort
+        for(int j=0;j<col[indx[i]];j++){
+            //Array follows the sorted index, instead of following i
+            cout<<array[indx[i]][j]<<" ";
         }
         cout<<endl;
     }
