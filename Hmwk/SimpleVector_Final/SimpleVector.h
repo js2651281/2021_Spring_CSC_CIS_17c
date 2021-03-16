@@ -50,6 +50,7 @@ public:
    void push_back(T);
    void push_front(T);
    void pop_back();
+   void pop_front();
    
    // Push a value into the beginning of an array
 };
@@ -119,7 +120,7 @@ void SimpleVector<T>::push_front(T val)
 //***********************************************************
 // pop_back function. Creates new array with size n-1,      *
 // Copies the old array, excluding the value at n. Deletes  *
-// the old array.                                           *
+// the old array.
 //***********************************************************
 template <class T>
 void SimpleVector<T>::pop_back()
@@ -132,6 +133,34 @@ void SimpleVector<T>::pop_back()
     //Copy the old array in to the new, excluding the last value
     for(int i = 0; i<nArraySize; i++)
         *(naptr + i) = *(aptr + i);
+    
+    //Delete the old array
+    delete []aptr;
+    
+    //Increment the array size by 1 and set the old pointer to 
+    //the new array pointer
+    arraySize = nArraySize;
+    aptr = new T[nArraySize];
+    aptr = naptr;
+        
+}
+
+//***********************************************************
+// pop_front function. Creates new array with size n-1,     *
+// Copies the old array, excluding the value at 0. Deletes  *
+// the old array.                                           *
+//***********************************************************
+template <class T>
+void SimpleVector<T>::pop_front()
+{
+    //Create an array 1 size smaller than the old array
+    T *naptr;
+    int nArraySize = this->arraySize - 1;
+    naptr = new T[nArraySize];
+    
+    //Copy the old array in to the new, excluding the first value
+    for(int i = 0; i<nArraySize; i++)
+        *(naptr + i) = *(aptr + i + 1);
     
     //Delete the old array
     delete []aptr;
