@@ -43,6 +43,13 @@ int main(int argc, char** argv) {
     for(int i=1;i<=nPush;i++){
         sv.push_front(rand()%26+65);
     }
+    
+    //Print the Vector
+    prntVec(sv,10);
+    
+    //Pop the last value from the array
+    sv.pop_back();
+    
     //Copy the Vector
     SimpleVector<unsigned char> copysv(sv);
     
