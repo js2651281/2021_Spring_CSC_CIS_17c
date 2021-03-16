@@ -58,17 +58,27 @@ public:
 template <class T>
 void SimpleVector<T>::push(T val)
 {
+    
     //Create an array 1 size larger than the old array
-    
+    T *naptr;
+    int nArraySize = 1 + this->arraySize;
+    naptr = new T[nArraySize];
     //Copy the old array in to the new
-    
+    for(int i = 0; i<arraySize; i++)
+        *(naptr + i) = *(aptr + i);
+        
     //Place the new value at the end of the new array
-    
+    *(naptr + arraySize) = val;
+
     //Delete the old array
+    delete []aptr;
     
     //Increment the array size by 1 and set the old pointer to 
     //the new array pointer
-    
+    arraySize = nArraySize;
+    aptr = new T[nArraySize];
+    aptr = naptr;
+     
 }
 
 //***********************************************************
