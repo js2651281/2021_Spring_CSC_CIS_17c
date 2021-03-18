@@ -8,6 +8,7 @@
 #ifndef ROWARAY_H
 #define	ROWARAY_H
 
+
 class RowAray{
     private:
         int size;
@@ -17,6 +18,7 @@ class RowAray{
         ~RowAray();
         int getSize(){return size;}
         int getData(int i){return rowData[i];}
+        void fillRow();
 };
 
 #endif	/* ROWARAY_H */

@@ -18,6 +18,7 @@ using namespace std;
 //Global Constants
 
 //Function Prototype
+
 void prntRow(RowAray *,int);
 void prntTab(Table *);
 void prntTri(Triangle *);
@@ -25,7 +26,7 @@ void prntTri(Triangle *);
 //Execution Begins Here!
 int main(int argc, char** argv) {
    //Initialize the random seed
-   srand(static_cast<unsigned int>(time(0)));
+   srand(static_cast<unsigned int>(time(NULL)));
    
    //Declare Variables
    int rows=6,cols=8,perLine=cols/2;
@@ -36,9 +37,9 @@ int main(int argc, char** argv) {
    //Print the RowAray
    cout<<"The Row Array size = "<<row.getSize()
            <<" printed "<<perLine<<" per Line";
-
-   prntRow(&row,perLine);
    
+   prntRow(&row,perLine);
+   /*
    //Test out the Table
    Table tab(rows,cols);
    
@@ -52,7 +53,7 @@ int main(int argc, char** argv) {
    //Print the Triangular Table
    cout<<"The triangular table size is [row,row] = ["<<rows<<","<<rows<<"]";
    prntTri(&tri);
-
+   */
    //Exit Stage Right
    return 0;
 }
