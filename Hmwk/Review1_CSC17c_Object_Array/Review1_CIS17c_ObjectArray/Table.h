@@ -21,6 +21,7 @@ class Table{
         int getSzRow(){return szRow;}
         int getSzCol(){return szCol;}
         int getData(int,int);
+        void fillTable();
 };
 
 #endif	/* TABLE_H */

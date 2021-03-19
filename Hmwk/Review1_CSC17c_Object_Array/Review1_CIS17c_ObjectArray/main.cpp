@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
            <<" printed "<<perLine<<" per Line";
    
    prntRow(&row,perLine);
-   /*
+   
    //Test out the Table
    Table tab(rows,cols);
    
@@ -47,6 +47,7 @@ int main(int argc, char** argv) {
    cout<<"The table size is [row,col] = ["<<rows<<","<<cols<<"]";
    prntTab(&tab);
    
+   /*
    //Test out the Triangular Table
    Triangle tri(rows);
    
