@@ -19,6 +19,7 @@ class Triangle{
         ~Triangle();
         int getSzRow(){return szRow;}
         int getData(int,int);
+        void fillTri();
 };
 
 

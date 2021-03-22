@@ -45,16 +45,15 @@ int main(int argc, char** argv) {
    
    //Print the Table
    cout<<"The table size is [row,col] = ["<<rows<<","<<cols<<"]";
-   prntTab(&tab);
+   prntTab(&tab); 
    
-   /*
    //Test out the Triangular Table
    Triangle tri(rows);
    
    //Print the Triangular Table
    cout<<"The triangular table size is [row,row] = ["<<rows<<","<<rows<<"]";
    prntTri(&tri);
-   */
+   
    //Exit Stage Right
    return 0;
 }
