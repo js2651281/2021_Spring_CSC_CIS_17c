@@ -27,7 +27,12 @@ Table::Table(int rows, int cols){
 }
 
 Table::~Table(){
-    delete records;
+    for(int i=0; i<szRow; i++){
+        for(int j=0; j<szCol; j++){
+            delete records[i];
+        }
+    }
+    delete []records;
 }
 
 int Table::getData(int row, int col){
