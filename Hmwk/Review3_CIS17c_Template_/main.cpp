@@ -1,6 +1,8 @@
 /* 
  * Author: Dr. Mark E. Lehr
+ * Edited by: Justin Solis
  * Created on March 5th, 2020, 8:54 AM
+ * Edited on March 30th, 2020 10:22 AM
  * Purpose:  Templated aggregates
  */
 
@@ -41,7 +43,7 @@ int main(int argc, char** argv) {
    Table<float> tab1(rows,cols);
    Table<float> tab2(tab1);
    Table<float> tab3=tab1+tab2;
-   
+ 
    cout<<"Float Table 1 size is [row,col] = ["
            <<rows<<","<<cols<<"]";
    prntTab(tab1);
